@@ -2,11 +2,11 @@ package main
 
 import "testing"
 
+//TestHello 测试
 func TestHello(t *testing.T) {
-	got := Hello("degbug")
-	want := "Hello, world1"
-
+	got := Hello()
+	want := "Hello, World"
 	if got != want {
-		t.Errorf("got '%s' want '%s'", got, want)
+		t.Errorf("got '%s want '%s", got, want)
 	}
 }

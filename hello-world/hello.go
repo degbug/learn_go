@@ -6,5 +6,11 @@ import "fmt"
 
 //主函数
 func main() {
-	fmt.Println("Hello World")
+	fmt.Println(Hello())
+}
+
+// Hello 定义函数
+// 返回字符串
+func Hello() string {
+	return "Hello, World"
 }
