@@ -4,8 +4,8 @@ import "testing"
 
 //TestHello 测试
 func TestHello(t *testing.T) {
-	got := Hello()
-	want := "Hello, World"
+	got := Hello("Chris")
+	want := "Hello, Chris"
 	if got != want {
 		t.Errorf("got '%s want '%s", got, want)
 	}
