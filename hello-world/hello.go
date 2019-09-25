@@ -15,5 +15,9 @@ func main() {
 // Hello 定义函数
 // 返回字符串
 func Hello(name string) string {
+	if name == "" {
+		name = "World"
+	}
+
 	return helloPrefix + name
 }
