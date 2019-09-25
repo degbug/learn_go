@@ -23,9 +23,19 @@ func Hello(name string, language string) string {
 		name = "World"
 	}
 
-	if language == spanish {
-		return spanishHelloPrefix + name
-	}
+	return greetingPrefix(language) + name
+}
 
-	return helloPrefix + name
+// greetingPrefix 根据语言获取前缀
+// 返回值（prefix string)可以在方法定义上定义返回值，这样可以定义多个返回值如(a,b string)
+func greetingPrefix(language string) (prefix string) {
+	switch language {
+	case chinese:
+		prefix = chineseHelloPrefix
+	case spanish:
+		prefix = spanishHelloPrefix
+	default:
+		prefix = helloPrefix
+	}
+	return
 }
