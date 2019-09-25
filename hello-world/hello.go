@@ -4,6 +4,9 @@ package main
 //引入fmt包
 import "fmt"
 
+//常量
+const helloPrefix = "Hello, "
+
 //主函数
 func main() {
 	fmt.Println(Hello("World"))
@@ -12,5 +15,5 @@ func main() {
 // Hello 定义函数
 // 返回字符串
 func Hello(name string) string {
-	return "Hello, " + name
+	return helloPrefix + name
 }
