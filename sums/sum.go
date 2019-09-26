@@ -27,3 +27,26 @@ func Sum(numbers []int) int {
 
 	return sum
 }
+
+//SumAll 用...表示可变参数
+func SumAll(numbersToSum ...[]int) (sums []int) {
+
+	//方法1：
+	/*
+		lengthOfNumbers := len(numbersToSum)
+		//make可以在创建切片是指定长度和容量
+		sum = make([]int, lengthOfNumbers)
+		for i, numbers := range numbersToSum {
+			sum[i] = Sum(numbers)
+		}
+	*/
+
+	//方法2：
+
+	//使用append往数组中添加计算后的总和
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
+	}
+
+	return sums
+}
