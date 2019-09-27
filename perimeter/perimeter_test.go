@@ -1,7 +1,6 @@
 package perimeter
 
 import (
-	"fmt"
 	"testing"
 )
 
@@ -21,7 +20,7 @@ func TestPerimeter(t *testing.T) {
 	t.Run("circles", func(t *testing.T) {
 		circle := Circle{10.0}
 		got := circle.Perimeter()
-		fmt.Println(got)
+		want := 62.83185307179586
 		if got != want {
 			//f对应float64，.2表示输出两位小数
 			t.Errorf("want '%f' but got '%f' ", want, got)
