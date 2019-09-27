@@ -49,3 +49,9 @@ func (c Circle) Area() float64 {
 func (c Circle) Perimeter() float64 {
 	return 2 * math.Pi * c.Radio
 }
+
+//Shape 定义Shape接口
+//GO语言interface resolution是隐式的，会自动匹配，比如这里Rectangle和Circle都自动匹配上了
+type Shape interface {
+	Area() float64
+}
